@@ -1,0 +1,224 @@
+:root {
+  --celadon: #97d4b7;
+  --light-blue: #d8f0ff;
+  --cool-gray: #9ea4ca;
+  --lilac: #c1a2c7;
+  --mountbatten-pink: #a38397;
+  --lgs-pink:#ffd1dc;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-blue);
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color: white;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: static;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 1;
+  padding: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--cool-gray);
+}
+
+/* SECTION GENEL TASARIM */
+section {
+  background-color: white;
+  border-radius: 15px;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 1000px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #333;
+  position: relative;
+}
+
+section hr {
+  width: 60px;
+  height: 4px;
+  background-color: var(--cool-gray);
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  margin-left: 0; 
+}
+
+/* ABOUT + EXPERIENCE yan yana */
+.section-wrapper {
+  display:flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1060px;
+  margin: 20px auto;
+  margin-bottom: 10px auto;
+  
+}
+
+#about, #experience {
+  flex: 1;
+  min-width: 300px;
+  max-width: 480px; 
+}
+
+/* LGS KAMPI ÖZEL STİL */
+#camp {
+  background-color: var(--lgs-pink);
+  color: rgb(3, 3, 3);
+  text-align: center;
+}
+
+#camp hr {
+  background-color: white;
+}
+
+#camp .btn {
+  background-color: white;
+  color: #d5679a;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#camp .btn:hover {
+  background-color: #ffe2ec;
+  color: #d10063;
+}
+
+/* SOSYAL MEDYA İKONLARI */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: var(--cool-gray);
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--mountbatten-pink);
+}
+
+/* UL STILLERI */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* KAMP KUTULARI */
+.camp-grid {
+  background-color: #ffd1dc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.camp-day {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: calc(25% - 20px); /* 4lü sıra */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  color: var(--lgs-pink);
+  text-align: left;
+  min-width: 200px;
+  transition: transform 0.3s;
+}
+
+.camp-day h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #d5679a;
+}
+
+.camp-day ul {
+  padding-left: 20px;
+  color: #333;
+}
+
+.camp-day .btn {
+  background-color: transparent;      /* Arka planı şeffaf */
+  color: #d95e97;                     /* Yazı rengi canlı pembe */
+  border: 2px solid #d5679a;          /* Çevresine belirgin çerçeve */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Responsive düzen (mobil uyumlu) */
+@media (max-width: 768px) {
+  .camp-day {
+    width: calc(50% - 20px); /* 2'li düzen */
+  }
+}
+
+@media (max-width: 500px) {
+  .camp-day {
+    width: 100%;
+  }
+}
+
+
+
+  
+
+
+
