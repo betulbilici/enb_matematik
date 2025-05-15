@@ -177,6 +177,11 @@ ul li {
   text-align: left;
   min-width: 200px;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100px; /* İhtiyacınıza göre ayarlayın */
+  padding-bottom: 70px; /* Buton için alt kısımda boşluk bırakır */
 }
 
 .camp-day h3 {
@@ -201,20 +206,77 @@ ul li {
   display: inline-block;
   margin-top: 15px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;          /* Butonun genişliğini arttırır (kutu genişliğinin %80'i) */
+  text-align: center;  /* Butondaki metni ortalar */
+  box-sizing: border-box; /* Border dahil genişlik hesaplanır */
 }
 
 /* Responsive düzen (mobil uyumlu) */
 @media (max-width: 768px) {
+  /* Kamp günlerinin düzeni */
   .camp-day {
     width: calc(50% - 20px); /* 2'li düzen */
   }
-}
-
-@media (max-width: 500px) {
-  .camp-day {
-    width: 100%;
+  
+  /* Header düzeni */
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Logo boyutu */
+  .logo img {
+    height: 60px; /* Mobilde daha küçük logo */
+  }
+  
+  /* Navbar yatay kalacak şekilde düzenleme */
+  .navbar ul {
+    flex-direction: row; /* Yatay düzen için */
+    flex-wrap: wrap; /* Gerekirse alt satıra geçer */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Menü öğeleri arası boşluk */
+    padding: 5px 0;
+    margin: 0;
+  }
+  
+  .navbar a {
+    font-size: 0.95rem; /* Biraz daha küçük yazı boyutu */
+    padding: 5px 10px; /* Tıklanabilir alan için padding */
+  }
+  
+  /* Header padding ayarı */
+  header {
+    padding: 10px 15px;
   }
 }
+
+/* Daha küçük mobil ekranlar için */
+@media (max-width: 500px) {
+  .camp-day {
+    width: 100%; /* Tek sütun düzeni */
+  }
+  
+  .logo img {
+    height: 50px; /* En küçük ekranlarda daha da küçük logo */
+  }
+  
+  /* En küçük ekranlarda navbar düzeni */
+  .navbar ul {
+    gap: 8px; /* Daha az boşluk */
+  }
+  
+  .navbar a {
+    font-size: 0.85rem; /* Daha küçük font */
+    padding: 3px 8px; /* Daha kompakt düğmeler */
+  }
+}
+
 
 
 
